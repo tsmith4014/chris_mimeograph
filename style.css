@@ -1,0 +1,93 @@
+body {
+  font-family: 'Special Elite', monospace;
+  margin: 0;
+  padding: 0; /* Removed padding to allow full viewport width */
+  display: flex;
+  flex-direction: column; /* Align children vertically */
+  justify-content: flex-start; /* Start at the top of the viewport */
+  align-items: center; /* Center children horizontally */
+  min-height: 100vh; /* Minimum height to fill the screen */
+  background-color: #f5f5f5;
+  background-image: url('mimeograph-texture.jpg');
+  background-size: cover;
+  color: #a74ffa;
+}
+
+.watermark {
+  width: 100%;
+  text-align: center;
+  padding-top: 20px; /* Add padding at the top instead of margin to prevent cut-off */
+}
+
+.watermark img {
+  max-width: 80%; /* Limiting maximum width to maintain visibility */
+  max-height: 100px;
+  opacity: 0.5;
+  display: block; /* Ensure img behaves as a block-level element */
+  margin: 0 auto; /* Center the logo horizontally */
+}
+
+.typewriter-text {
+  text-align: center;
+  max-width: 800px;
+  width: 100%;
+  margin: auto; /* Center typewriter text */
+  padding: 1em;
+  box-sizing: border-box;
+}
+
+.typewriter-text p {
+  font-size: 1.5em;
+  color: #a74ffa;
+  margin: 0.5em 0;
+}
+
+/* Imperfect text effect */
+.imperfect {
+  opacity: 0.7;
+  transform: translate(-1px, -1px);
+}
+
+/* Responsive Design for Large Desktops */
+@media (min-width: 992px) {
+  .typewriter-text p {
+    font-size: 2em;
+  }
+}
+
+@media (min-width: 1200px) {
+  .typewriter-text p {
+    font-size: 2.5em;
+  }
+}
+
+/* Responsive Design for Tablets */
+@media (max-width: 768px) {
+  .typewriter-text p {
+    font-size: 1.3em;
+  }
+}
+
+/* Responsive Design for Large Phones */
+@media (max-width: 600px) {
+  .typewriter-text p {
+    font-size: 1em;
+  }
+
+  .watermark img {
+    max-height: 60px; /* Adjust logo size for small screens */
+  }
+}
+
+/* Noise Overlay */
+.noise {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('noise-overlay.png');
+  opacity: 0.5;
+  z-index: 2;
+}
